@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>make simple calculator using popup box</title>
+</head>
+<body>
+    <script>
+        var a=Number(prompt("enter a no."));
+        console.log(a);
+       // alert(a);
+        let b=Number(prompt("enter b no."));
+        console.log(b);
+       var c=prompt("enter a operator");
+if(c=="+"||"-"||"*"||"/"){
+       if(c=="+"){
+       console.log(a+b);
+       }
+      else if (c=="-") {
+        console.log(a-b);
+      }
+      else if(c=="*") {
+        console.log(a*b);
+      }  
+      else if(c=="/"){
+        
+        if (b==0) {
+            console.log("no. is invalid");
+        } 
+        console.log(a/b);
+      }
+}
+else{
+    console.log("not valid");
+}
+
+    </script>
+</body>
+</html>

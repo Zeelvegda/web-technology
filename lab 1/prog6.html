@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Armstrong or not</title>
+</head>
+<body>
+    <script>
+            var n = Number(prompt("enter a no."));
+        var a,r,result=0;
+        a=n;
+        while(a!=0){
+             r = a % 10;
+            result+= r*r*r;
+            a=Math.floor(a /= 10);
+            
+        }
+        if(result==n){
+
+         console.log(" is a armstrong Number"+n);
+        }
+
+        else {
+            console.log(" is not a armstrong Number"+n);
+
+        }
+</script>
+</body>
+</html>

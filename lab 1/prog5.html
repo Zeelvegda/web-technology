@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title> palindrome or not</title>
+</head>
+<body>
+    <script>
+       var n = Number(prompt("enter a no."));
+         a=n ;
+        var r = 0 ;
+        var pal = 0;
+       
+        
+        while(n!=0){
+             r = n % 10;
+            pal = pal*10 + r;
+            n=Math.floor(n /= 10);
+        }
+        if(a==pal){
+
+         console.log(" is a Palindrome Number"+n);
+        }
+
+        else {
+            console.log(" is not a Palindrome Number"+n);
+
+    }
+        
+   
+
+
+        
+    </script>
+</body>
+</html>
