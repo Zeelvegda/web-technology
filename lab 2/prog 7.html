@@ -1,0 +1,16 @@
+<html>
+    <head></head>
+    <body>
+        <script>
+            str=prompt("enter a string");
+            document.write("first index="+(str.indexOf("a")));
+            document.write("<br>");
+            document.write("last index="+(str.lastIndexOf("a")));
+            document.write("<br>");
+            for(i=str.indexOf("a")+1;i<str.lastIndexOf("a");i++){
+                 ch=str.charAt(i);
+                document.write(ch);
+            }
+        </script>
+    </body>
+</html>

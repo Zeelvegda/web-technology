@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>GCD(greatest common divisor)</title>
+</head>
+<body>
+    <script>
+        var a=Number(prompt("enter a no."));
+        console.log(a);
+        var b=Number(prompt("enter b no."));
+        console.log(b);
+        var gcd=0;
+        for(let i=0;i<=a&&i<=b;i++){
+            if(a%i==0 && b%i==0){
+                gcd=i;
+
+            }
+            console.log("number is gcd" +a+ "and" +b+ "is" +gcd );
+        }
+
+    </script>
+    
+</body>
+</html>
