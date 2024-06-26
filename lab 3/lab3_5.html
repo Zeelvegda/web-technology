@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>5. Write a JavaScript that takes sentence from the user and uses a loop that searches a word in sentence held in an array, returning the index of the word.</title>
+</head>
+<body>
+    <script>
+        var a = [];
+        var n = Number(prompt("enter the number of elements: "));
+        for(var i = 0; i < n; i++){
+            a[i] = prompt("enter the elements: ");
+        }
+        var word = prompt("enter the word: ");
+        for(var i = 0; i < n; i++){
+            if(a[i] == word){
+                console.log(i);
+                break;
+            }
+        }
+    </script>
+  
+</body>
+</html>
