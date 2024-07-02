@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+ <meta charset="UTF-8">
+ <meta name="viewport" content="width=device-width, initial-scale=1.0">
+ <title> WAP to display Faculties stored in array</title>
+
+<style>
+            .box{
+                border:1px solid black;
+                float:left;
+            }
+        </style>
+    </head>
+    <body>
+        <script>
+            let faculty=new Array();
+            faculty=[
+                {name:'abc',
+                 lastname:'cde',
+                 subject:'java',
+                },
+                {name:'abc',
+                 lastname:'cde',
+                 subject:'wt',
+                },
+                {name:'abc',
+                 lastname:'cde',
+                 subject:'ds',
+                },
+                {name:'abc',
+                 lastname:'cde',
+                 subject:'dbms',
+                }
+            ]
+            for(i=0;i<faculty.length;i++){
+                document.write('<div class="box">')
+                document.write("name="+faculty[i].name+"<br>");
+                document.write("lastname="+faculty[i].lastname+"<br>");
+                document.write("subject="+faculty[i].subject+"<br>");
+            }
+            
+            
+        </script>
+    </body>
+</html>
+    
+</body>
+</html>

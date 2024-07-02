@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>WAP to display students stored in array</title>
+</head>
+<body>
+  <script>
+    student=[
+        {
+            firstname:'abc',
+            lastname:'def',
+            rollno:'123',
+            emailid:'abc@gmail.com'
+        },
+        {
+            firstname:'abc',
+            lastname:'def',
+            rollno:'123',
+            emailid:'abc@gmail.com'
+        },
+        {
+            firstname:'abc',
+            lastname:'def',
+            rollno:'123',
+            emailid:'abc@gmail.com'
+        },
+        {
+            firstname:'abc',
+            lastname:'def',
+            rollno:'123',
+            emailid:'abc@gmail.com'
+        },
+        {
+            firstname:'abc',
+            lastname:'def',
+            rollno:'123',
+            emailid:'abc@gmail.com'
+        },
+        {
+            firstname:'abc',
+            lastname:'def',
+            rollno:'123',
+            emailid:'abc@gmail.com'
+        }
+    ]
+   
+        document.write('<table border=1>');
+            document.write('<tr>');
+                        document.write('<th>'+"firstname"+'</th>');
+                        document.write('<th>'+"lastname"+'</th>');
+                        document.write('<th>'+"rollno"+'</th>');
+                        document.write('<th>'+"emailid"+'</th>');
+                        document.write('<th>'+"edit"+'</th>');
+                  document.write('</tr>');
+           
+                for(i=0;i<student.length;i++){
+                    
+                    document.write('<tr>');
+                        document.write('<td>'+student[i].firstname+'</td>');
+                        document.write('<td>'+student[i].lastname+'</td>');
+                        document.write('<td>'+student[i].rollno+'</td>');
+                        document.write('<td>'+student[i].emailid+'</td>');
+                         
+                         document.write('<td class="btn btn-primary">'+"edit"+'</td>');  
+                    document.write('</tr>');    
+
+    }
+    document.write('</table>');
+           
+</script>
+</body>
+</html>

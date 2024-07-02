@@ -1,0 +1,73 @@
+<html>
+    <head>
+        <style>
+            .box1{
+                width:20%;
+                border:1px solid black;
+                float:left;
+                margin:1px 1px 1px 1px;
+                text-align:center;
+            }
+            
+        </style>
+    </head>
+   <body>
+    <script>
+        prod=[
+            {
+                name:'abc',
+                type:'dce',
+                place:'ghi',
+                cp:2000,
+                sp:3000
+            },
+            {
+                name:'abc',
+                type:'dce',
+                place:'ghi',
+                cp:2000,
+                sp:3000
+            },
+            {
+                name:'abc',
+                type:'dce',
+                place:'ghi',
+                cp:2000,
+                sp:3000
+            },
+            {
+                name:'abc',
+                type:'dce',
+                place:'ghi',
+                cp:2000,
+                sp:3000
+            },
+            {
+                name:'abc',
+                type:'dce',
+                place:'ghi',
+                cp:2000,
+                sp:3000
+            },
+            {
+                name:'abc',
+                type:'dce',
+                place:'ghi',
+                cp:2000,
+                sp:3000
+            }
+            
+        ]
+        for(i=0;i<prod.length;i++){
+            console.log(prod[i]);
+            document.write('<div class="box1">')
+                document.write(prod[i].name+"<br>");
+                document.write(prod[i].type+"<br>");
+                document.write(prod[i].place+"<br>");
+                document.write(prod[i].cp+"<br>");
+                document.write(prod[i].sp+"<br>");
+                document.write('</div>')
+            }
+    </script>
+   </body>
+</html>
