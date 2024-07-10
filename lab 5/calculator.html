@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8"><!DOCTYPE html>
+    <html>
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <title>(method:2)WAP to create a basic graphical Calculator using HTML and JavaScript</title>
+    </head>
+    <body>
+            <input type="text" id="answer" style="width:70px" style="background-color: greenyellow; color: whitesmoke; border-color: greenyellow;">
+            <button onclick="clearDisplay()" style="background-color: greenyellow; color: whitesmoke; border-color: greenyellow;">C</button>
+            <div>
+                <button onclick="char('1')" style="background-color: greenyellow; color: whitesmoke; border-color: greenyellow">1</button>
+                <button onclick="char('2')" style="background-color: greenyellow; color: whitesmoke; border-color: greenyellow">2</button>
+                <button onclick="char('3')" style="background-color: greenyellow; color: whitesmoke; border-color: greenyellow">3</button>
+                <button onclick="char('/')" style="background-color: greenyellow; color: whitesmoke; border-color: greenyellow">/</button>
+            </div>
+            <div>
+                <button onclick="char('4')" style="background-color: greenyellow; color: whitesmoke; border-color: greenyellow">4</button>
+                <button onclick="char('5')" style="background-color: greenyellow; color: whitesmoke; border-color: greenyellow">5</button>
+                <button onclick="char('6')" style="background-color: greenyellow; color: whitesmoke; border-color: greenyellow">6</button>
+                <button onclick="char('')" style="background-color: greenyellow; color: whitesmoke; border-color: greenyellow"></button>
+            </div>
+            <div>
+                <button onclick="char('7')" style="background-color: greenyellow; color: whitesmoke; border-color: greenyellow">7</button>
+                <button onclick="char('8')" style="background-color: greenyellow; color: whitesmoke; border-color: greenyellow">8</button>
+                <button onclick="char('9')" style="background-color: greenyellow; color: whitesmoke; border-color: greenyellow">9</button>
+                <button onclick="char('-')" style="background-color: greenyellow; color: whitesmoke; border-color: greenyellow">-</button>
+            </div>
+            <div>
+                <button onclick="char('0')" style="background-color: greenyellow; color: whitesmoke; border-color: greenyellow">0</button>
+                <button onclick="char('.')" style="background-color: greenyellow; color: whitesmoke; border-color: greenyellow">.</button>
+                <button onclick="calculate('=')" style="background-color: greenyellow; color: whitesmoke; border-color:greenyellow;;">=</button>
+                <button onclick="char('+')" style="background-color: greenyellow; color: whitesmoke; border-color:greenyellow">+</button>
+            </div>
+            <script type="text/javascript">
+                function char(char)
+                {
+                    document.getElementById("answer").value += char;
+                }
+                function clearDisplay()
+                {
+                    document.getElementById("answer").value = "";
+                }
+                function calculate()
+                {
+                    document.getElementById("answer").value = eval(document.getElementById("answer").value);
+                }	
+            </script>
+    </body>
+    </html>
+    

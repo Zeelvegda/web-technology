@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title></title>
+</head>
+<body>
+    
+ <table>
+
+    <tr>LOGIN PAGE</tr>
+
+    <tr>
+        <td>Enter Name : </td>
+        <td><input type="text" id="name"></td>
+    </tr>
+
+    <tr>
+        <td>Enter Password : </td>
+        <td><input type="text" id="password"></td>
+    </tr>
+
+    <tr>
+        <td>Confirm Password : </td>
+        <td><input type="text" id="password"></td>
+    </tr>
+
+    <tr>
+        <td>Enter Email : </td>
+        <td><input type="text" id="email"></td>
+    </tr>
+
+    <tr>
+        <td>Enter Enrollment : </td>
+        <td><input type="text" id="enrol"></td>
+    </tr>
+
+    <tr>
+        <td>Enter Mobile : </td>
+        <td><input type="number" id="num"></td>
+    </tr>
+
+    <tr>
+        <td>
+            <button onclick="validate()">Submit</button>
+        </td>
+    </tr>
+</table>
+    
+<script>
+    function validate(){
+    let user = document.getElementById("name").value;
+    let pass1 = document.getElementById("password").value;
+    let pass2 = document.getElementById("password").value;
+    let email = document.getElementById("email").value;
+    let mobile = document.getElementById("num").value;
+    let enrol = document.getElementById("enrol").value;
+
+    //name should have atleast one capital letter
+    let pattern1 = /[a-zA-Z]{1,}/;
+
+    //email pattern
+    let pattern2 = /^([a-zA-Z0-9._%-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,})$/;
+
+    //mobile no should be exactly of 10digits
+    let pattern3 = /[0-9]{10}/;
+
+    //password 8-12 charec, 1 dig, 1 special sym
+    let pattern4 = /^(?=.*\d)(?=.*[!@#$%^&*])(?=.*[a-zA-Z]).{8,12}$/;
+
+    //enrollment sould have sequence '2301010' and last 3 unique digits '159'
+    //2301010159
+    let pattern6 = /^230101010[0-9]{3}/;
+
+    let regex1 = new RegExp(pattern1);
+    let regex2 = new RegExp(pattern2);
+    let regex3 = new RegExp(pattern3);
+    let regex4 = new RegExp(pattern4);
+    let regex6 = new RegExp(pattern6);
+    
+    if((regex1.test(user))
+        &&(regex2.test(email))
+        &&(regex3.test(mobile))
+        &&(regex4.test(pass1))
+        &&(regex6.test(enrol)))
+            {
+                alert("valid");
+            }
+            else{
+                alert("invalid");
+    }
+
+}
+</script>
+</body>
+</html>
