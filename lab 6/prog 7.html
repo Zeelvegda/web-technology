@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>7. WAP to perform CRUD operation on Array using HTML and JavaScript.</title>
+</head>
+
+<body>
+
+    <input type="text" placeholder="Enter First Name" id="fname" /> <br /> <br />
+    <input type="text" placeholder="Enter Last Name" id="lname" /> <br /> <br />
+    <input type="number" placeholder="Enter RollNo" id="rollno" /><br /> <br />
+    <input type="button" value="add" class="add" onclick="addStudent()" id="btn"><br /><br />
+    <span id="errmsg" class="bagde bagde-danger"></span>
+
+
+    <div id="result">
+    </div>
+</body>
+<script>
+    students = [
+        {
+            fname: "rahul",
+            lname: "sharma",
+            rollno: "101"
+        },
+        {
+            fname: "ronak",
+            lname: "patel",
+            rollno: "102"
+        }
+    ];
+
+    idToEdit = -1;
+
+    function displayStudent() {
+        console.log(students);
+        temp = document.getElementById("result");
+        tempSt = "";
+        tempSt += "<table border='1' class='table table-stripped table-dark'>";
+        tempSt += "<th>First Name</th><th>Last Name</th><th>Roll No</th><th>Actions</th><th></th>"
+        for (let i = 0; i < students.length; i++) {
+            tempSt += "<tr>";
+            tempSt += "<td>" + students[i].fname + "</td>";
+            tempSt += "<td>" + students[i].lname + "</td>";
+            tempSt += "<td>" + students[i].rollno + "</td>";
+            tempSt += "<td>" + '<input type="button" value="Edit" class="btn btn-warning btn-sm edit" onclick="editStudent(' + i + ')"/>' + "</td>";
+            tempSt += "<td>" + '<input type="button" value="Delete" class="btn btn-danger btn-sm edit" onclick="deleteStudent(' + i + ')"/>' + "</td>";
+            tempSt += "</tr>";
+        }
+        tempSt += "</table>";
+
+        temp.innerHTML = tempSt;
+    }
+
+    displayStudent();
+
+    function editStudent(i) {
+
+        idToEdit = i;
+        document.getElementById('btn').value = "Edit";   //jyre user edit click kre to button add mathi edit thai jai
+        document.getElementById('fname').value = students[i].fname;
+        document.getElementById('lname').value = students[i].lname;
+        document.getElementById('rollno').value = students[i].rollno;
+    }
+
+    function addStudent() {
+        tempfname = document.getElementById('fname');
+        templname = document.getElementById('lname');
+        temprollno = document.getElementById('rollno');
+
+        let tempObj = {
+            fname: document.getElementById('fname').value,
+            lname: document.getElementById('lname').value,
+            rollno: document.getElementById('rollno').value
+        }
+
+        if (tempfname.value == "" || templname.value == "" || temprollno.value == "") {
+            tempname.style.border = "2px solid red";
+            temprollno.style.border = "2px solid red";
+            document.getElementById('errmsg').innerHTML = "Please enter all details!";
+        }
+        else {
+            if (idToEdit >= 0) {
+                students[idToEdit] = tempObj;
+                idToEdit = -1;
+                document.getElementById('btn').value = "Add";
+            }
+            else {
+                students.push(tempObj);
+            }
+        }
+
+        tempfname.value = "";
+        templname.value = "";
+        temprollno.value = "";
+        displayStudent();
+    }
+
+    function deleteStudent(i) {
+        students.splice(i, 1);   //i index vado  ekj element delete thai ane next elements thi show kre 
+        displayStudent();
+
+    }
+</script>
+
+</body>
+
+</html>

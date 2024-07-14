@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>8.. Write a JavaScript that handles following mouse events. Add necessary elements. (B)
+        If the mouse is over the heading should turn yellow and if the mouse goes out of the 
+        heading it should turn black.
+        If ƒndtime button is clicked show time and date information.
+        If button named “red” is clicked, background should change to red and If button named 
+        “green” is clicked, background should
+        change to green.
+    </title>
+</head>
+<body id="body">
+    <h1 onmouseover="colorchange()" onmouseout="changecolor()" style="height: 50px; width: 100px;" id="heading">heading</h1>
+    <button onclick="mydate()">Click and see Date and Time.</button>
+    <span id="msg"></span>
+    <br>
+    <button onclick="myfunction()" >red</button>
+    <button onclick="colorgreen()" >green</button>
+    
+    <script>
+        function colorchange(){
+            document.getElementById('heading').style.backgroundColor="yellow";
+        }
+        function changecolor(){
+            document.getElementById('heading').style.backgroundColor="skyblue";
+        }
+        function mydate() {
+            document.getElementById('msg').innerHTML =Date();
+}
+        function myfunction(){
+            document.getElementById('body').style.backgroundColor="red";
+        }
+        function colorgreen(){
+            document.getElementById('body').style.backgroundColor="green";
+        }
+    </script>
+</body>
+</html>

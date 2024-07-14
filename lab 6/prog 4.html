@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>4. WAP to recognize which form event is ƒired</title>
+    <style>
+        * {
+            box-sizing: border-box;
+            overflow: hidden;
+        }
+
+        #output {
+            background-color: #f8fafb;
+            height: 250px;
+            width: 270px;
+            border: 3px solid black;
+            padding: 7px;
+            position: relative;
+            left: 500px;
+        }
+
+        #h1 {
+            color: rgb(10, 88, 10);
+        }
+
+        #sub {
+            background-color: green;
+            font-family: 'Times New Roman';
+            font-weight: bold;
+            height: 30px;
+            border-radius: 4px;
+        }
+
+        #reset {
+            background-color: red;
+            font-family: 'Times New Roman';
+            font-weight: bold;
+            height: 30px;
+            border-radius: 4px;
+        }
+    </style>
+
+</head>
+
+<body>
+    <div id="output">
+        <h1 id="h1">Login Page</h1>
+
+        <form id="myForm">
+            <label for="username">Username:</label>
+            <input type="text" id="username" name="username"><br /><br />
+
+            <label for="password">Password:</label>
+            <input type="password" id="password" name="password"><br /><br />
+
+            <input type="submit" value="Submit" id="sub">
+            <input type="reset" value="Reset" id="reset"><br /><br />
+        </form>
+    </div>
+
+
+
+    <script>
+        //submit
+        document.getElementById('myForm').addEventListener('submit', function (event) {
+            event.preventDefault()
+            let outputElement = document.getElementById('output')
+            outputElement.innerHTML = 'Form submitted!';
+        });
+
+        //reset
+        document.getElementById('myForm').addEventListener('reset', function (event) {
+            document.getElementById('output').innerHTML = 'Form reset';
+        });
+
+        //change
+        document.getElementById('username').addEventListener('change', function (event) {
+            document.getElementById('output').innerHTML = 'Username changed';
+        });
+
+        //focus
+        document.getElementById('username').addEventListener('focus', function (event) {
+            document.getElementById('output').innerHTML = 'Username input focused';
+        });
+
+        document.getElementById('password').addEventListener('focus', function (event) {
+            document.getElementById('output').innerHTML = 'Password input focused';
+        });
+
+        //blur
+        document.getElementById('password').addEventListener('blur', function (event) {
+            document.getElementById('output').innerHTML = 'Password input blurred';
+        });
+    </script>
+
+</body>
+
+</html>
