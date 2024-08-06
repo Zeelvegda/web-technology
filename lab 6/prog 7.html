@@ -8,26 +8,25 @@
 </head>
 
 <body>
-
+    <h1>CRUD</h1>
     <input type="text" placeholder="Enter First Name" id="fname" /> <br /> <br />
     <input type="text" placeholder="Enter Last Name" id="lname" /> <br /> <br />
     <input type="number" placeholder="Enter RollNo" id="rollno" /><br /> <br />
     <input type="button" value="add" class="add" onclick="addStudent()" id="btn"><br /><br />
     <span id="errmsg" class="bagde bagde-danger"></span>
 
-
     <div id="result">
     </div>
-</body>
+
 <script>
     students = [
-        {
-            fname: "rahul",
+       {
+            fname: "rita",
             lname: "sharma",
             rollno: "101"
         },
         {
-            fname: "ronak",
+            fname: "riya",
             lname: "patel",
             rollno: "102"
         }
@@ -100,7 +99,7 @@
     }
 
     function deleteStudent(i) {
-        students.splice(i, 1);   //i index vado  ekj element delete thai ane next elements thi show kre 
+        students.splice(i, 1);   //i index vado  ekj element delete thai ane next elements thi show kre
         displayStudent();
 
     }
