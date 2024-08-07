@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>3. Demonstrate the default parameter while using a function.</title>
+</head>
+<body>
+   
+    <script>
+        function abc(a,b){
+            sum = a+b;
+           console.log(sum);
+        }
+        abc(1,2);
+        function def(a,b=4){
+            sum = a+b;
+            console.log("Given value in parametrer "+sum);
+        }
+        def(1);
+        function xyz(a,b){
+           if(b===undefined){
+            b=4;
+           }
+           sum=a+b;
+           console.log("Given value with undefined keyword "+sum);
+        }
+        xyz(1);
+ 
+    </script>
+</body>
+</html>

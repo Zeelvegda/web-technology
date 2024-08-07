@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>WAP to demonstrate callbacks in JavaScript.</title>
+</head>
+<body>
+    <script>
+    function add(x,y) {
+       z=x+y;
+       display(z);
+      }
+      function sub(x,y) {
+      q=x-y;
+       display(q);
+      }
+      function display(a) {
+            document.write("the value is:"+a);
+      }
+      function operate(callback) {
+        n1=parseInt(prompt("enter 1st number"));
+        n2=parseInt(prompt("enter 2nd number"));
+      //  n1=prompt("enter 1");
+        //n2=prompt("enter 2");
+        callback(n1,n2);
+      }
+      operate(add);
+      operate(sub);
+    </script>
+      
+</body>
+</html>
